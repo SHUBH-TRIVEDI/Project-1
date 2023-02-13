@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="/Assignment1/css/innerpage.css"> -->
+        <link rel="stylesheet" href="/css/innerpage.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/Assignment1/css/_variable.scss">
+    </head>
+
+    <body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <div>
+            <nav class="navbar navbar-expand-lg fixed-top"
+                style="background-color: #ffffff;">
+                <div class="container-fluid">
+                    <img src="../images/menu-bar.svg" alt="logo"
+                        class="dashboard-toggle-logo">
+                    <a class="navbar-brand" href="#"><img
+                            src="../images/logo.svg" alt="logo"
+                            class="dashboard-web-logo"></a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar">
+                        <span><img src="../images/menu-bar.svg" alt="logo"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1"
+                        id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <img class="offcanvas-title"
+                                id="offcanvasNavbarLabel"
+                                src="../images/mobile-header-logo.svg"></img>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start
+                            flex-grow-1">
+                            <li class="nav-item d-flex align-items-center
+                                dashboard-search-toggle">
+                                <img src="../images/search-icon.svg" alt=""
+                                    class="dashboard-search-icon">
+                                <div class="searchspace">
+                                    <input type="search" class="form-control
+                                        rounded searchbar" placeholder="Search"
+                                        aria-label="Search"
+                                        aria-describedby="search-addon" />
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav justify-content-end
+                            dashboard-nav-sidebar-toggle">
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail
+                                    dashbord-sidebar-detail dashboard-active-tab
+                                    d-flex">
+                                    <img src="../images/dashboard-active.svg"
+                                        alt="" class="dashboard-active
+                                        sidebarimg">
+                                    <div class="">Dashboard</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/graph-default.svg" alt=""
+                                        class="graph-default sidebarimg ">
+                                    <div class="">Analysis</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/inbox-default.svg" alt=""
+                                        class="inbox-default sidebarimg ">
+                                    <div class="">Inbox</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/clock-default.svg" alt=""
+                                        class="clock-default sidebarimg ">
+                                    <div class="">History</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/user-default.svg" alt=""
+                                        class="user-default sidebarimg ">
+                                    <div class="">Users</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/maintenance-default.svg"
+                                        alt=""
+                                        class="maintenance-default sidebarimg ">
+                                    <div class="">Maintenance</div>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <div class="sidebar-detail d-flex">
+                                    <img src="../images/setting-default.svg"
+                                        alt="" class="setting-default sidebarimg
+                                        ">
+                                    <div class="">Setting</div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item d-flex align-items-center">
+                                <img src="../images/notification-icon.svg" alt=""
+                                    class="dashboard-notification-icon">
+                                <img src="../images/profile.png" alt=""
+                                    class="dashboard-profile-icon">
+                                <div>John Doe</div>
+                                <img src="../images/downward-arrow.svg" alt=""
+                                    class="dashboard-select-downward">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <div class="container-fluid well" id="home" style="display:block;
+            padding-top:60px;">
+            <div class="row">
+                <div class="col-lg-2 dashboard-sidebar-toggle">
+                    <div class="sidebar">
+                        <div class="sidebar-detail dashbord-sidebar-detail
+                            dashboard-active-tab d-flex">
+                            <img src="../images/dashboard-active.svg" alt=""
+                                class="dashboard-active sidebarimg">
+                            <div class="">Dashboard</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/graph-default.svg" alt=""
+                                class="graph-default sidebarimg ">
+                            <div class="">Analysis</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/inbox-default.svg" alt=""
+                                class="inbox-default sidebarimg ">
+                            <div class="">Inbox</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/clock-default.svg" alt=""
+                                class="clock-default sidebarimg ">
+                            <div class="">History</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/user-default.svg" alt=""
+                                class="user-default sidebarimg ">
+                            <div class="">Users</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/maintenance-default.svg" alt=""
+                                class="maintenance-default sidebarimg ">
+                            <div class="">Maintenance</div>
+                        </div>
+                        <div class="sidebar-detail d-flex">
+                            <img src="../images/setting-default.svg" alt=""
+                                class="setting-default sidebarimg ">
+                            <div class="">Setting</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-12 maindiv">
+                    <div class="">
+                        <div class="col-3 mt-3 me-auto analysistxt">
+                            Analysis
+                        </div>
+                        <!-- <div class="col-sm-10 col-lg-10 col-x"></div> -->
+                        <div class="container-fluid form mt-3 ms-3 ">
+                            <form>
+                                <fieldset>
+                                    <div class="col-4 mt-3 ms-4 onetxt">
+                                        <legend>One Column</legend>
+                                    </div>
+                                    <div class=" col-lg-11 col-md-11 col-sm-11
+                                        mt-4 ms-4 ">
+                                        <input type="text" id="name"
+                                            class="form-control"
+                                            placeholder="Name">
+                                    </div>
+                                    <div class=" col-lg-11 col-md-11 col-sm-11
+                                        mt-4 ms-4 ">
+                                        <select id="disabledSelect"
+                                            class="form-select">
+                                            <option>Dropdown</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-floating col-lg-11
+                                        col-md-11 col-sm-11 mt-3 ms-4 multitxt">
+                                        <textarea class="form-control"
+                                            placeholder="Multilinetext"
+                                            style="height: 100px"
+                                            id="floatingTextarea"></textarea>
+                                        <label for="floatingTextarea">multilinetext</label>
+                                    </div>
+
+                                    <div class="col-4 mt-3 ms-4 onetxt">
+                                        <legend>Two Column</legend>
+                                    </div>
+                                    <div class=" twoclm ">
+                                        <div class="row mt-3">
+                                            <div class="col col-lg-5 col-md-12
+                                                mt-4 ms-4 col-sm-11">
+                                                <input type="text" id="name"
+                                                    class="form-control"
+                                                    placeholder="Name">
+                                            </div>
+                                            <div class="col col-lg-5 col-md-12
+                                                mt-4 ms-4 col-sm-11">
+                                                <input type="text" id="jhon"
+                                                    class="form-control"
+                                                    placeholder="Jhondoe">
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col col-lg-5 col-md-12
+                                                mt-4 ms-4 col-sm-11">
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="inputPassword"
+                                                    placeholder="Password">
+                                            </div>
+                                            <div class="col col-lg-5 col-md-12
+                                                mt-4 ms-4 col-sm-11">
+                                                <select id="disabledSelect"
+                                                    class="form-select">
+                                                    <option>Dropdown</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 mt-3 mb-0 ms-4 onetxt">
+                                        <legend>Third Column</legend>
+                                    </div>
+                                    <div class="tiredclmn">
+                                        <div class="row mt-3">
+                                            <div class="col col-lg-3 col-md-4
+                                                col-sm-11 mt-3 ms-4">
+                                                <input type="text" id="focus"
+                                                    class="form-control"
+                                                    placeholder="Focus">
+
+                                            </div>
+                                            <div class="col col-lg-3 col-md-4
+                                                col-sm-11 mt-3 ms-4">
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="inputPassword2"
+                                                    placeholder="Password">
+                                            </div>
+                                            <div class="col col-lg-3 col-md-4
+                                                col-sm-11 mt-3 ms-4">
+                                                <input type="text" id="disable"
+                                                    class="form-control"
+                                                    placeholder="Jhondoe">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-4 mt-4 ms-4 mb-0 onetxt">
+                                        <legend>Four Column</legend>
+                                    </div>
+                                    <div class="fourclm mt-3">
+                                        <div class="row ">
+                                            <div class="col col-lg-2 col-md-5
+                                                col-sm-11 mt-3 ms-4 me-4
+                                                d-flex-column">
+                                                <input type="text"
+                                                    id="designation"
+                                                    class="form-control"
+                                                    placeholder="UI Design">
+                                                <p class=" warning1 mt-2 mb-0">
+                                                    Enter valid data</p>
+                                            </div>
+                                            <div class="col col-lg-2 col-md-5
+                                                col-sm-11 mt-4 ms-4 me-4
+                                                d-flex-column">
+                                                <input type="text" id="name"
+                                                    class="form-control"
+                                                    placeholder="Name">
+                                                <p class=" warning2 mt-2 mb-0">
+                                                    Enter your fullname as per
+                                                    ID</p>
+                                            </div>
+                                            <div class="col col-lg-2 col-md-5
+                                                col-sm-11 mt-4 ms-4 me-4">
+                                                <input type="text" id="jhon"
+                                                    class="form-control"
+                                                    placeholder="Jhondoe">
+                                            </div>
+                                            <div class="col col-lg-2 col-md-5
+                                                col-sm-11 mt-4 ms-4 me-4">
+                                                <select id="Select"
+                                                    class="form-select">
+                                                    <option>Select</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-4 mt-3 ms-4 onetxt ">
+                                        <legend>Other Design Elements</legend>
+                                    </div>
+                                    <div class="col-4 mt-3 ms-4 fw-semibold" >File Upload</div>
+                                    <div class="col-4 mt-3 ms-4 fw-semibold" >
+                                        <button type="button" class="btn btn-primary" id="upload">
+                                            <img src="/Assignment1/images/cloud-upload-icon.svg" alt="">
+                                            <span>Upload</span></button>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col col-4 mt-3 ms-4 onetxt">
+                                                <legend>Radio button</legend>
+                                            </div>
+                                        </div>
+                                        <div class="row ms-2 mt-2">
+                                            <div class="col col-lg-2 col-md-2 col-sm-2 mt-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                      Option1
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                            <div class="col col-lg-2 col-md-2 col-sm-2 mt-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" checked type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                     Option2
+                                                    </label>
+                                                  </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col col-4 mt-3 ms-4 onetxt">
+                                                    <legend>Checkbox</legend>
+                                                </div>
+                                            </div>
+                                            <div class="row ms-2 mt-2">
+                                                <div class="col col-lg-2 col-md-3 col-sm-2 mt-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Option 1
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="col col-lg-2 col-md-3 col-sm-2 mt-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input"  type="checkbox" value="" id="flexCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexCheckChecked">
+                                                          Option 2
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+
+                                    <div class="col-4 mt-3 ms-4 fw-semibold" >Snackbar</div>
+                                    <div class="row">
+                                        <div class="col snackbar1  col-lg-5 col-md-8 col-sm-12 mt-3 ms-4">
+                                            <img src="../images/error-icon.svg" alt="error" class="logos">
+                                             <p class="errortxt">This is an error Message</p>
+                                        </div>
+                                        <div class="col snackbar2 col-lg-5 col-md-8 col-sm-12 mt-3 ms-4">
+                                            <img src="../images/info-icon.svg" alt="info" class="logos">
+                                             <p class="infotxt">This is an information Message!</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col snackbar3 col-lg-5 col-md-8 col-sm-12 mt-3 ms-4">
+                                            <img src="../images/warning-icon.svg" alt="warning" class="logos">
+                                            <p class="warningtxt">This is a warning Message!</p>
+                                        </div>
+                                        <div class="col snackbar4 col-lg-5 col-md-8 col-sm-12 mt-3  ms-4">
+                                            <img src="../images/success-icon.svg" alt="success" class="logos">
+                                            <p class="succtxt">This is a success Message!</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mt-3 ms-4 fw-semibold" >Call to Action</div>
+                                    <button type="button" class="btn btn-danger mt-3 ms-4" id="pri">Primary</button>
+                                    <button type="button" class="btn btn-danger mt-3 ms-2" id="sec">Secondary</button>
+
+                                    <div class="col-4 mt-4 ms-4 fw-semibold" >Tabs</div>
+                                    <div class="col-4 mt-4 ms-4">
+                                        <span id="tab1">Tab 1</span><span class="ms-5">Tab 2</span><span class="ms-5">Tab 3</span>
+                                    </div>
+                                    <!-- <hr class="border border-danger border-2 opacity-50 col-1 hrr"> -->
+                                    <hr class="hrr col-1 ">
+                                    <hr >
+                                    <div class="mb-1 text-wrap tabtxt " id="port">
+                                        Curious which components explicitly require our JavaScript and Popper?
+                                         Click the show components link below. If youre at all unsure about the general page structure, keep reading for an example page template.
+                                         Curious which components explicitly require ur JavaScript and Popper?
+                                         Click the show components link below. If youre at all unsure about the general page structure, 
+                                    </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body></html>
